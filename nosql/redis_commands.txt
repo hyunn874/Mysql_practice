@@ -1,0 +1,20 @@
+# ✅ Key-Value 저장
+SET user:1:name "김개발"
+
+# ✅ 값 조회
+GET user:1:name
+
+# ✅ 만료 시간 3600초 (1시간) 설정 후 값 저장
+SETEX session:abc 3600 "user_data"
+
+# ✅ 리스트(List) 추가
+LPUSH queue:jobs "task1" "task2"
+
+# ✅ 리스트 전체 조회
+LRANGE queue:jobs 0 -1
+
+# ✅ 해시(Hash) 저장
+HSET user:1 name "김개발" email "kim@example.com"
+
+# ✅ 해시 전체 조회
+HGETALL user:1
